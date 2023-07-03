@@ -19,3 +19,23 @@ string[] ArrayElemLessThanThree(string[] arr)
     }
     return newArray;
 }
+
+void PrintStringArray(string[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if(i != arr.Length - 1) Console.Write($"{arr[i]}, ");
+        else Console.Write($"{arr[i]}");
+    }
+    Console.WriteLine();
+}
+
+Console.Write("Введите количество элементов: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите элементы массива через Enter: ");
+string[] arr = EnterArray(n);
+Console.WriteLine();
+
+string[] newArr = ArrayElemLessThanThree(arr);
+PrintStringArray(arr);
+PrintStringArray(newArr);
